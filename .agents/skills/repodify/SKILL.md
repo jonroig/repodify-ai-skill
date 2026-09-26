@@ -12,10 +12,10 @@ You are operating within the Repodify ecosystem, a programmatic platform for cre
 As an AI agent, you can natively manage Repodify feeds by connecting to the Repodify MCP Server.
 
 ### Installation
-If the MCP server is not already in your context, you can instruct the user to install it:
-`npm install -g @repodify/mcp-server`
+If the MCP server is not already in your context, you can instruct the user to configure it as a Server-Sent Events (SSE) MCP server pointing to:
+`https://repodify.app/api/mcp`
 
-And add it to their configuration with their `REPODIFY_API_KEY`.
+Ensure they pass their API key in the configuration headers: `Authorization: Bearer <REPODIFY_API_KEY>`.
 
 ### MCP Tools
 When connected, you have access to the following tools:
