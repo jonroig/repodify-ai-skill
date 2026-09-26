@@ -30,6 +30,7 @@ When connected, you have access to the following tools:
 9. `submit_repodcast`: Submit the feed to the global PodcastIndex directory.
 10. `delete_episode`: Remove a specific episode from a feed.
 11. `update_episode`: Edit a specific episode's title or description.
+12. `get_repodcast_stats`: Fetch total XML fetches and actual MP3 downloads for a feed.
 
 ## Workflow Example: Building a Playlist
 If the user asks you to "Build a mixtape about History", you should:
