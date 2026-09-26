@@ -29,8 +29,14 @@ When connected, you have access to the following tools:
 8. `update_repodcast`: Edit the feed's name, description, or image.
 9. `submit_repodcast`: Submit the feed to the global PodcastIndex directory.
 10. `delete_episode`: Remove a specific episode from a feed.
-11. `update_episode`: Edit a specific episode's title or description.
+11. `update_episode`: Edit a specific episode's title, description, audioUrl, or imageUrl.
 12. `get_repodcast_stats`: Fetch total XML fetches and actual MP3 downloads for a feed.
+13. `update_profile`: Update the user's public profile (displayName, bio, imageUrl).
+
+## Direct API Capabilities (Beyond MCP)
+If you need to upload an audio file natively instead of just attaching a URL, Repodify provides two options:
+1. Hit `POST /api/upload` (multipart/form-data) to get an S3 URL, then use the `add_episode_to_repodcast` MCP tool.
+2. Hit `POST /api/v1/feeds/[slug]/episodes/upload` (multipart/form-data with `file` and `title`) to upload the MP3 and construct the episode in a single REST request.
 
 ## Workflow Example: Building a Playlist
 If the user asks you to "Build a mixtape about History", you should:
